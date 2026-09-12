@@ -30,6 +30,12 @@ const products = [
     tags: ["CLI", "Ollama", "Agents"],
   },
   {
+    icon: Code2,
+    title: "RazCode Build",
+    desc: "A powerful IDE-like environment for agentic software engineering. Features real-time browser verification, parallel sub-agent orchestration, and deep codebase memory.",
+    tags: ["Build", "IDE", "Automation"],
+  },
+  {
     icon: Cpu,
     title: "Agent infrastructure",
     desc: "Workflow engines, tool runners, approval gates, observability, and multi-provider LLM layers that power production agents.",
@@ -44,6 +50,11 @@ const products = [
 ];
 
 const work = [
+  {
+    name: "RazCode Build",
+    year: "2026",
+    blurb: "Agentic Build TUI with real-time browser QA, parallel tasking, and automated software engineering workflows.",
+  },
   {
     name: "RazCode",
     year: "2025–26",

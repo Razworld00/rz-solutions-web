@@ -16,10 +16,8 @@ export default function Nav() {
   return (
     <header className="fixed top-0 inset-x-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-md">
       <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-5 sm:px-8">
-        <a href="#" className="flex items-center gap-2 font-mono text-sm tracking-tight">
-          <span className="inline-flex h-7 w-7 items-center justify-center rounded bg-accent/15 text-accent font-bold">
-            RZ
-          </span>
+        <a href="#" className="flex items-center gap-3 font-mono text-sm tracking-tight">
+          <img src="/logo.png" alt="Raznet Solutions Logo" className="h-10 w-auto" />
           <span className="text-foreground">
             Raznet<span className="text-muted">.</span>Solutions
           </span>
