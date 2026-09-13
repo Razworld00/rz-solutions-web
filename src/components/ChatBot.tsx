@@ -7,7 +7,6 @@ import {
   X, 
   Send, 
   Settings, 
-  ChevronDown, 
   Bot, 
   User, 
   Loader2, 

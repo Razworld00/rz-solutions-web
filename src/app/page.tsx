@@ -12,7 +12,6 @@ import {
   ArrowRight,
   GitBranch,
   Mail,
-  BookOpen,
 } from "lucide-react";
 import Nav from "@/components/Nav";
 

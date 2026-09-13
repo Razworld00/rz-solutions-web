@@ -69,7 +69,8 @@ Always be professional, technical yet accessible, and helpful. If you don't know
     return new Response(stream, {
       headers: { "Content-Type": "text/plain; charset=utf-8" },
     });
-  } catch (error: any) {
-    return NextResponse.json({ error: error.message }, { status: 500 });
+  } catch (error: unknown) {
+    const errorMessage = error instanceof Error ? error.message : "An unknown error occurred";
+    return NextResponse.json({ error: errorMessage }, { status: 500 });
   }
 }
