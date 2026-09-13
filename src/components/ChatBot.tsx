@@ -25,7 +25,7 @@ type ModelOption = {
 };
 
 const MODELS: ModelOption[] = [
-  { id: "m8n8max-m3:cloud", label: "m8n8max-m3 (Cloud)" },
+  { id: "minimax-m3:cloud", label: "Minimax M3 (Cloud)" },
   { id: "gemma4:cloud", label: "Gemma 4 (Cloud)" },
   { id: "nemotron-3-super:cloud", label: "Nemotron 3 Super (Cloud)" },
 ];
