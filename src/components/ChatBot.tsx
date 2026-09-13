@@ -190,7 +190,7 @@ export default function ChatBot() {
                     <Bot size={32} />
                   </div>
                   <div>
-                    <h4 className="text-sm font-semibold">Hello! I'm Raz.</h4>
+                    <h4 className="text-sm font-semibold">Hello! I&apos;m Raz.</h4>
                     <p className="text-xs text-muted max-w-[240px]">
                       Ask me about Raznet Solutions, RazCode, or any of your agentic coding needs.
                     </p>

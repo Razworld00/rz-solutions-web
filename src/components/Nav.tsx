@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
@@ -18,7 +19,14 @@ export default function Nav() {
     <header className="fixed top-0 inset-x-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-md">
       <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-5 sm:px-8">
         <a href="#" className="flex items-center gap-3 font-mono text-sm tracking-tight">
-          <img src="/logo.png" alt="Raznet Solutions Logo" className="h-10 w-auto" />
+          <Image 
+            src="/logo.png" 
+            alt="Raznet Solutions Logo" 
+            width={40} 
+            height={40} 
+            className="h-10 w-auto"
+            priority 
+          />
           <span className="text-foreground">
             Raznet<span className="text-muted">.</span>Solutions
           </span>
