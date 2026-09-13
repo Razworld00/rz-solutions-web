@@ -12,6 +12,7 @@ This is the professional digital presence for Raznet Solutions, showcasing our c
   - **Multi-Model Support**: Toggle between `minimax-m3:cloud`, `gemma4:cloud`, and `nemotron-3-super:cloud` via a hidden settings menu.
   - **Deep Knowledge**: Pre-loaded with context on RazCode, RazCode Build, and Raznet's company history.
 - **Interactive Portfolio**: Showcasing enterprise web projects and AI tooling.
+- **Direct Communication**: Integrated WhatsApp floating action button for immediate client contact and lead generation.
 - **Responsive Design**: Optimized for desktop, tablet, and mobile viewports.
 
 ## 🛠 Tech Stack
