@@ -12,6 +12,7 @@ import {
   ArrowRight,
   GitBranch,
   Mail,
+  BookOpen,
 } from "lucide-react";
 import Nav from "@/components/Nav";
 
@@ -53,37 +54,58 @@ const work = [
   {
     name: "RazCode Build",
     year: "2026",
+    category: "AI Tooling",
     blurb: "Agentic Build TUI with real-time browser QA, parallel tasking, and automated software engineering workflows.",
+    link: "https://github.com/Razworld00/razcode-build",
+    codeSnippet: "function orchestrateSubagents(tasks) {\\n  return parallel(tasks.map(t => spawn_subagent(t)));\\n}",
   },
   {
     name: "RazCode",
     year: "2025–26",
+    category: "AI Agents",
     blurb: "Local-first coding agent with rich terminal UI, live activity, turbo profiles, and Ollama / cloud model support.",
+    link: "https://github.com/Razworld00/RazCoder-Website",
+    codeSnippet: "const agent = new RazCodeAgent({ model: 'ollama/llama3', turbo: true });",
   },
   {
-    name: "Casting MVP",
+    name: "LTS Construction",
     year: "2025",
-    blurb: "End-to-end casting workflow — talent, casting directors, submissions, and production tooling.",
+    category: "Enterprise Web",
+    blurb: "Official corporate presence and project management surfaces for a leading construction firm.",
+    link: "https://github.com/Razworld00/-LTS-Construction-Official-Website",
+    codeSnippet: "export const ProjectGrid = () => <div className='grid grid-cols-3 gap-4'>...</div>",
   },
   {
-    name: "Booking & commerce",
+    name: "Trauma Rehab Centre",
+    year: "2025",
+    category: "Healthcare",
+    blurb: "Specialized web presence for rehabilitation services, focusing on accessibility and patient care.",
+    link: "https://github.com/Razworld00/Trauma-Rehabilitation-Centre",
+    codeSnippet: "const AccessibilityConfig = { ariaLive: 'polite', contrast: 'high' };",
+  },
+  {
+    name: "Paigos Barbershop",
     year: "2024–25",
-    blurb: "Appointment systems, computer store, and barbershop experiences built for day-to-day operators.",
+    category: "Local Business",
+    blurb: "Modern booking and commerce experience built for day-to-day grooming operators.",
+    link: "https://github.com/Razworld00/Paigos-Barbershop",
+    codeSnippet: "async function bookAppointment(slot) { await db.appointments.create({ slot }); }",
+  },
+  {
+    name: "Zulu Sons Enterprise",
+    year: "2024–25",
+    category: "Business Ops",
+    blurb: "Corporate identity and digital infrastructure for enterprise-level business operations.",
+    link: "https://github.com/Razworld00/Zulu-Sons-Enterprise",
+    codeSnippet: "const EnterpriseCore = () => <InfrastructureLayer provider='AWS' />,",
   },
   {
     name: "SmartScraper & ops",
     year: "2025",
+    category: "Automation",
     blurb: "Data extraction, WhatsApp automation, observability, and internal dashboards for faster delivery.",
-  },
-  {
-    name: "Security & landing systems",
-    year: "2024–25",
-    blurb: "Cybersecurity-focused sites and high-conversion landing surfaces for product launches.",
-  },
-  {
-    name: "Project management",
-    year: "2025",
-    blurb: "Lightweight project and collaboration tools tailored to small teams shipping software.",
+    link: "#",
+    codeSnippet: "const scrape = async (url) => { return await firecrawl.scrape(url); }",
   },
 ];
 
@@ -247,17 +269,43 @@ export default function Home() {
             </p>
           </motion.div>
 
-          <div className="mt-12 divide-y divide-border border-y border-border">
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {work.map((w, i) => (
               <motion.div
                 key={w.name}
                 {...fadeUp}
                 transition={{ duration: 0.45, delay: i * 0.05 }}
-                className="grid gap-2 py-6 sm:grid-cols-[140px_1fr_2fr] sm:items-baseline sm:gap-8"
+                className="group rounded-2xl border border-border bg-surface p-6 transition hover:border-accent/40 hover:shadow-lg hover:shadow-accent/5"
               >
-                <span className="font-mono text-xs text-muted">{w.year}</span>
-                <h3 className="text-base font-semibold text-foreground">{w.name}</h3>
-                <p className="text-sm text-muted">{w.blurb}</p>
+                <div className="flex justify-between items-start mb-4">
+                  <span className="font-mono text-[10px] uppercase tracking-wider text-accent">{w.category}</span>
+                  <span className="font-mono text-[10px] text-muted">{w.year}</span>
+                </div>
+                <h3 className="text-lg font-semibold text-foreground group-hover:text-accent transition-colors">
+                  {w.name}
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted">
+                  {w.blurb}
+                </p>
+                <div className="mt-4 flex flex-col gap-3">
+                  <div className="rounded-lg bg-black/50 p-3 font-mono text-[10px] leading-relaxed text-muted border border-border/50">
+                    <div className="flex items-center gap-2 mb-2 opacity-50">
+                      <div className="h-2 w-2 rounded-full bg-red-500/60" />
+                      <div className="h-2 w-2 rounded-full bg-yellow-500/60" />
+                      <div className="h-2 w-2 rounded-full bg-green-500/60" />
+                      <span className="ml-1 text-[9px] uppercase tracking-tighter">code_snippet.ts</span>
+                    </div>
+                    <code className="block whitespace-pre-wrap break-all text-accent/80">{w.codeSnippet}</code>
+                  </div>
+                  <a
+                    href={w.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-xs font-medium text-accent hover:underline"
+                  >
+                    View Repository <ArrowRight size={12} />
+                  </a>
+                </div>
               </motion.div>
             ))}
           </div>
@@ -310,7 +358,7 @@ export default function Home() {
               Whether you need a coding agent in your terminal, an internal tool,
               or a full product — we design and ship it.
             </p>
-            <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
+            <div className="mt-8 flex items-center justify-center gap-4">
               <a
                 href="mailto:bathie28@gmail.com"
                 className="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-semibold text-background transition hover:bg-accent/90"

@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
@@ -25,13 +26,13 @@ export default function Nav() {
 
         <nav className="hidden items-center gap-8 md:flex">
           {links.map((l) => (
-            <a
+            <Link
               key={l.href}
               href={l.href}
               className="text-sm text-muted transition hover:text-foreground"
             >
               {l.label}
-            </a>
+            </Link>
           ))}
           <a
             href="#contact"
@@ -54,14 +55,14 @@ export default function Nav() {
         <div className="border-t border-border bg-surface px-5 py-4 md:hidden">
           <div className="flex flex-col gap-3">
             {links.map((l) => (
-              <a
+              <Link
                 key={l.href}
                 href={l.href}
                 onClick={() => setOpen(false)}
                 className="text-sm text-muted"
               >
                 {l.label}
-              </a>
+              </Link>
             ))}
             <a
               href="#contact"
